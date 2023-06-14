@@ -9,6 +9,8 @@ description: "Just a test page"
 
 Here is some content
 
+Here is a KEYWORD to replace.
+
 ```
 Here is some formatted content
 ```
