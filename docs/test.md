@@ -12,3 +12,7 @@ Here is some content
 ```
 Here is some formatted content
 ```
+
+<ce-foo name="tata"></ce-foo>
+
+end of page
