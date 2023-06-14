@@ -13,13 +13,15 @@ import { Foo } from './foo.component';
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
-  constructor(injector: Injector) {
+  constructor(private injector: Injector) {
     console.log('App module loaded');
-    const customElement = createCustomElement(Foo, { injector });
+  }
+
+  ngDoBootstrap() {
+    const customElement = createCustomElement(Foo, { injector: this.injector });
     customElements.define("ce-foo", customElement);
   }
 }
